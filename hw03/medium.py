@@ -36,7 +36,7 @@ class Matrix(TrivialMatrixMixin, PrettyMatrixMixin, FileMatrixMixin, NumpyMixin)
                 return NotImplemented
 
         return Matrix(getattr(ufunc, method)(
-            *(x.data for x in args),
+            *(x.__data for x in args),
             **kwargs
         ))
 
