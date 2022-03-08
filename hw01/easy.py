@@ -11,3 +11,6 @@ def fibonacci(n: int):
         prev, curr = curr, prev+curr
         yield curr
 
+
+def f(n):
+    return list(fibonacci(n))
